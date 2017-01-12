@@ -27,12 +27,18 @@
             <type>pom</type>
             <scope>import</scope>
         </dependency>
+
+        <dependency>
+    			<groupId>com.axa.ficovie</groupId>
+    			<artifactId>ficovie-core</artifactId>
+          <version>0.0.1-SNAPSHOT</version>
+    		</dependency>
       </dependencies>
   </dependencyManagement>
 
   <modules>
      <module>ficovie-web</module>
-     <!--module>ficovie-core</module>
-     <module>ficovie-batch</module-->
+     <module>ficovie-core</module>
+     <module>ficovie-batch</module>
    </modules>
 </project>
