@@ -1,11 +1,12 @@
 <div class="header">
-  <p>
-    This part of the hader is always here
-  </p>
-  <p ng-if="user">
-    User  is logged in : {{user.name}} / {{user.id}}
-  </p>
-  <p ng-if="!user">
-    Hey buddy, log in! Be cool
-  </p>
+    <div>
+      <i class="material-icons">person</i>
+      {{user.name}}
+    </div>
+
+    <div>
+      <i class="material-icons">group</i>
+      <span class="contact-link">Autres contacts du foyer</span>
+    </div>
+
 </div>

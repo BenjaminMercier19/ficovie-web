@@ -1,9 +1,9 @@
 ##Installing all dependencies
 
 ```mvn clean install```
-##Deploying in local environnement
+##Deploying frontend in local environnement
 
-```mvn spring-boot:run```
+```mvn spring-boot:run -DskipTests -pl :ficovie-web```
 
 ##Local frontend development
 

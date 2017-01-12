@@ -1,16 +1,65 @@
-.wrapper {
-  display: flex;
-  flex-flow: row wrap;
+html {
+    height: 100%;
 }
 
+body {
+    flex-flow: row;
+    display: flex;
+    height: 100%;
+    overflow-y: hidden;
+}
+
+
 /* We tell all items to be 100% width */
+
 .header, .main, .nav, .aside, .footer {
-  flex: 1 100%;
+    flex: 1 100%;
+}
+
+.wrapper {
+    display: flex;
+    flex-flow: row wrap;
 }
 
 .header {
-  flex-flow: column;
+    flex-flow: column;
+    background: #07217f;
+    flex: 0 1 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 25px;
 }
+
+.sidebar-wrapper {
+    background: #07217f;
+    flex: 25%;
+    display: flex;
+    min-width: 200px;
+}
+
+.sidebar {
+    background-color: tomato;
+    border-radius: 0 15px 0 0;
+    display: flex;
+    flex: 1;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-view {
+    background-color: #aaFF65;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
 
 /* We rely on source order for mobile-first approach
  * in this case:
@@ -21,21 +70,36 @@
  * 5. footer
  */
 
+
 /* Medium screens */
+
 @media all and (min-width: 600px) {
-  /* We tell both sidebars to share a row */
-  .aside { flex: 1 auto; }
+    /* We tell both sidebars to share a row */
+    .aside {
+        flex: 1 auto;
+    }
 }
 
+
 /* Large screens */
+
 @media all and (min-width: 800px) {
-  /* We invert order of first sidebar and main
+    /* We invert order of first sidebar and main
    * And tell the main element to take twice as much width as the other two sidebars
    */
-  .main { flex: 2 0px; }
-
-  .aside-1 { order: 1; }
-  .main    { order: 2; }
-  .aside-2 { order: 3; }
-  .footer  { order: 4; }
+    .main {
+        flex: 2 0px;
+    }
+    .aside-1 {
+        order: 1;
+    }
+    .main {
+        order: 2;
+    }
+    .aside-2 {
+        order: 3;
+    }
+    .footer {
+        order: 4;
+    }
 }
